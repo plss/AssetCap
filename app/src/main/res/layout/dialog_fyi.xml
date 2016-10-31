@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="เนื่องจาก IT ได้มีการปรับปรุงแอพลิเคชันเพื่อนำขึ้น PlayStore จึงขอความร่วมมือผู้ใช้งานกด 'รับทราบ' ด้านล่างแล้วจึงกด 'ตกลง' ในหน้าถัดไปเพื่อทำการลบแอพลิเคชันเก่า ตามรูปด้านล่าง"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_delete_oldapp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="ขอบคุณที่ให้ความร่วมมือครับ"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDialogFyi"
+            style="@style/dialog_blue_button"
+            android:layout_width="wrap_content"
+            android:text="รับทราบ" />
+    </LinearLayout>
+
+</LinearLayout>

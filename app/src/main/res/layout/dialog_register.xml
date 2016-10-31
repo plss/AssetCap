@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/fbutton_color_belize_hole">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="สมัครใช้งานระบบ"
+            android:id="@+id/textView9"
+            android:layout_centerInParent="true"
+            android:textColor="#FFF"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/registForm"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="รหัสพนักงาน"
+                    android:id="@+id/textView4"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerVertical="true" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emp_id"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_alignParentLeft="false"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:layout_toLeftOf="@+id/btnSearchEmp" />
+
+                <info.hoang8f.widget.FButton
+                    android:id="@+id/btnSearchEmp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:text="ค้นหา"
+                    android:textColor="@color/primary_text_default_material_dark"
+                    fbutton:buttonColor="@color/fbutton_color_peter_river"
+                    fbutton:cornerRadius="5dp"
+                    fbutton:shadowColor="@color/fbutton_color_belize_hole"
+                    fbutton:shadowEnabled="true"
+                    fbutton:shadowHeight="3dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="8dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="รหัสบัตรประชาชน"
+                    android:id="@+id/textView5"
+                    android:layout_marginRight="8dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_card"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ชื่อ"
+                        android:id="@+id/textView6"
+                        android:layout_marginRight="8dp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fname"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="นามสกุล"
+                    android:id="@+id/textView7"
+                    android:layout_marginRight="8dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lname"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เบอร์โทรศัพท์"
+                    android:id="@+id/textView8"
+                    android:layout_marginRight="8dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tel"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เรียบร้อย"
+                android:textColor="@color/primary_text_default_material_dark"
+                android:textSize="@dimen/abc_text_size_title_material"
+                android:layout_below="@+id/registForm"
+                fbutton:buttonColor="@color/fbutton_color_peter_river"
+                fbutton:cornerRadius="5dp"
+                fbutton:shadowColor="@color/fbutton_color_belize_hole"
+                fbutton:shadowEnabled="true"
+                fbutton:shadowHeight="3dp"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

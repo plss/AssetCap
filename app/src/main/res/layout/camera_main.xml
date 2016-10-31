@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frameCam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:id="@+id/camMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignTop="@+id/surfaceView"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/galleryBtn"
+                android:background="@drawable/gallery"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+
+            <ImageView
+                android:id="@+id/selectAssetBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icondl"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:padding="2dp" />
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="false"
+                android:layout_below="@+id/surfaceView"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/captBtn"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/btnComment"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/comment" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toEndOf="@+id/captBtn"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+                    android:layout_centerVertical="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/btnSwCam"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:background="@drawable/switchcam" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/flashBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="false"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:background="@drawable/csflash" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/captBtn"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentBottom="false"
+                    android:src="@drawable/capture"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+            <!--<ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/flashCam"
+                android:src="@drawable/csflash"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />-->
+    </RelativeLayout>
+
+</RelativeLayout>

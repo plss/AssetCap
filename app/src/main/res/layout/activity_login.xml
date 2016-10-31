@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mibh.mis.tms.Login">
+
+    <!-- Login progress -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/downLayout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icn"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/downLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <FrameLayout
+                android:id="@+id/loginForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_round"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_round">
+
+                    <LinearLayout
+                        android:id="@+id/id_login_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:windowSoftInputMode="stateHidden">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <EditText
+                                android:id="@+id/empid_lgn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_border"
+                                android:hint="รหัสพนักงาน"
+                                android:maxLines="1"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="8dp"
+                                android:password="false"
+                                android:singleLine="true"
+                                android:textSize="@dimen/abc_text_size_title_material" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <EditText
+                                android:id="@+id/idcard_lgn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_border"
+                                android:hint="รหัสบัตรประชาชน"
+                                android:inputType="numberPassword"
+                                android:maxLines="1"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="8dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/abc_text_size_title_material" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <info.hoang8f.widget.FButton
+                            android:id="@+id/btnLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="เข้าสู่ระบบ"
+                            android:textColor="@color/primary_text_default_material_dark"
+                            android:textSize="@dimen/abc_text_size_title_material"
+                            fbutton:buttonColor="@color/fbutton_color_peter_river"
+                            fbutton:cornerRadius="5dp"
+                            fbutton:shadowColor="@color/fbutton_color_belize_hole"
+                            fbutton:shadowEnabled="true"
+                            fbutton:shadowHeight="3dp" />
+
+                    </LinearLayout>
+
+                    <!--<Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="false"
+                        android:layout_below="@+id/id_login_form"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/btn_red"
+                        android:text="เข้าสู่ระบบ"
+                        android:textColor="@color/primary_text_default_material_dark"
+                        android:textSize="@dimen/abc_text_size_title_material" />-->
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@+id/loginProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/txtRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="สมัครใช้งานระบบ"
+                android:textColor="#FFF"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/abc_text_size_subhead_material" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="V-1.0"
+        android:textColor="#FFF"
+        android:textSize="12dp" />
+
+</RelativeLayout>
+
